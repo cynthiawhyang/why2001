@@ -39,15 +39,18 @@
         .section-title { width: 25%; font-size: 22px; font-weight: bold; color: #555; }
         .section-content { width: 75%; }
 
-        .item { margin-bottom: 40px; display: flex; gap: 20px; }
+        .item { margin-bottom: 40px; }
+        .item-header { display: flex; gap: 20px; }
         .date { width: 140px; font-size: 14px; color: #888; flex-shrink: 0; padding-top: 4px; }
         .details h3 { margin: 0; font-size: 18px; color: #333; }
-        .details h4 { margin: 5px 0; color: #666; font-weight: 500; }
-        .details .location { color: #888; font-size: 14px; display: block; margin-bottom: 8px; }
+        .details h4 { margin: 5px 0 2px; color: #666; font-weight: 600; }
+        .location { color: #999; font-size: 13px; display: block; margin-bottom: 10px; }
         
         ul { padding-left: 18px; list-style: none; margin-top: 10px; }
+        ul li { margin-bottom: 8px; }
         ul li::before { content: "•"; color: var(--accent-blue); font-weight: bold; display: inline-block; width: 1em; margin-left: -1em; }
-        .sub-list { padding-left: 20px; margin-bottom: 10px; }
+        
+        .sub-list { padding-left: 20px; margin-top: 5px; }
         .sub-list li::before { content: "-"; color: var(--accent-lavender); }
         
         hr { border: 0; height: 1px; background: linear-gradient(to right, var(--accent-pink), var(--accent-lavender), var(--accent-blue)); margin: 40px 0; }
@@ -62,24 +65,30 @@
         <div class="section-title">Work Experience</div>
         <div class="section-content">
             <div class="item">
-                <div class="date">Apr 2025 - Present</div>
-                <div class="details">
-                    <h3>Legal Operations Associate</h3>
-                    <h4>SHOPLINE (Taipei City, Taiwan)</h4>
-                    <ul><li>Legal Assistance and Legal Writing</li></ul>
+                <div class="item-header">
+                    <div class="date">Apr 2025 - Present</div>
+                    <div class="details">
+                        <h3>Legal Operations Associate</h3>
+                        <h4>SHOPLINE</h4>
+                        <span class="location">Taipei City, Taiwan</span>
+                        <ul><li>Legal Assistance and Legal Writing</li></ul>
+                    </div>
                 </div>
             </div>
 
             <div class="item">
-                <div class="date">May 2023 - Jul 2023</div>
-                <div class="details">
-                    <h3>Advocate General</h3>
-                    <h4>UNISCA (Amsterdam, Netherlands)</h4>
-                    <ul>
-                        <li><strong>Legal Drafting:</strong> Responsible for drafting legal issues and providing legal advice to ensure all proceedings aligned with international legal standards.</li>
-                        <li><strong>Advisory Role:</strong> Delivered critical legal counsel and supervised the integrity of the judicial process.</li>
-                        <li><strong>Procedural Oversight:</strong> Served as the primary authority for overseeing and enforcing strict compliance with the official rules of procedure during the ICJ simulation.</li>
-                    </ul>
+                <div class="item-header">
+                    <div class="date">May 2023 - Jul 2023</div>
+                    <div class="details">
+                        <h3>Advocate General</h3>
+                        <h4>UNISCA</h4>
+                        <span class="location">Amsterdam, North Holland, Netherlands</span>
+                        <ul>
+                            <li><strong>Legal Drafting:</strong> Responsible for drafting legal issues and providing legal advice to ensure all proceedings aligned with international legal standards.</li>
+                            <li><strong>Advisory Role:</strong> Delivered critical legal counsel and supervised the integrity of the judicial process.</li>
+                            <li><strong>Procedural Oversight:</strong> Served as the primary authority for overseeing and enforcing strict compliance with the official rules of procedure during the ICJ simulation.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -91,30 +100,34 @@
         <div class="section-title">Education</div>
         <div class="section-content">
             <div class="item">
-                <div class="date">Sep 2021 - Jul 2024</div>
-                <div class="details">
-                    <h3>Bachelor's degree, Law (Honours)</h3>
-                    <h4>University of Amsterdam - PPLE College</h4>
-                    <span class="location">(Amsterdam, Netherlands)</span>
-                    <p><strong>Grade: Honours</strong></p>
-                    <ul>
-                        <li><strong>Major in Law, modules including:</strong>
-                            <ul class="sub-list">
-                                <li>EU Frameworks: European Union Law, European Administrative Law, European Contract Law, and European Tort Law.</li>
-                                <li>International & Comparative Law: Public International Law, Comparative Constitutional Law, and Comparative Criminal Law.</li>
-                            </ul>
-                        </li>
-                        <li><strong>Interdisciplinary Foundation:</strong> Completed curriculum spanning Statistics, Philosophy, Psychology, Politics, and Economics, developing a multifaceted perspective on global social and regulatory systems.</li>
-                    </ul>
+                <div class="item-header">
+                    <div class="date">Sep 2021 - Jul 2024</div>
+                    <div class="details">
+                        <h3>Bachelor's degree, Law (Honours)</h3>
+                        <h4>University of Amsterdam - PPLE College</h4>
+                        <span class="location">Amsterdam, Netherlands</span>
+                        <p><strong>Grade: Honours</strong></p>
+                        <ul>
+                            <li><strong>Major in Law, modules including:</strong>
+                                <ul class="sub-list">
+                                    <li>EU Frameworks: European Union Law, European Administrative Law, European Contract Law, and European Tort Law.</li>
+                                    <li>International & Comparative Law: Public International Law, Comparative Constitutional Law, and Comparative Criminal Law.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Interdisciplinary Foundation:</strong> Completed curriculum spanning Statistics, Philosophy, Psychology, Politics, and Economics, developing a multifaceted perspective on global social and regulatory systems.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
             <div class="item">
-                <div class="date">Sep 2020 - Sep 2021</div>
-                <div class="details">
-                    <h3>Foundation degree, Social Sciences</h3>
-                    <h4>OnCampus Global</h4>
-                    <span class="location">(Amsterdam, Netherlands)</span>
+                <div class="item-header">
+                    <div class="date">Sep 2020 - Sep 2021</div>
+                    <div class="details">
+                        <h3>Foundation degree, Social Sciences</h3>
+                        <h4>OnCampus Global</h4>
+                        <span class="location">Amsterdam, Netherlands</span>
+                    </div>
                 </div>
             </div>
         </div>
