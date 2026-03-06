@@ -12,7 +12,7 @@
             align-items: center; 
             height: 100vh; 
             font-family: 'PingFang TC', 'Microsoft JhengHei', sans-serif; 
-            background-color: #fcfafc; /* 莫內淡紫色背景 */
+            background-color: #fcfafc; 
         }
 
         @keyframes slideUpFade { 
@@ -27,52 +27,36 @@
             border-radius: 20px; 
             box-shadow: 0 10px 40px rgba(0,0,0,0.03); 
             animation: slideUpFade 1s ease-out; 
-            max-width: 450px; 
-            width: 90%; 
+            width: 400px; 
         }
 
+        /* 🚀 調整重點：調降標題邊距 */
         h1 { 
             font-size: 32px; 
-            margin-bottom: 40px; 
+            margin-top: 0;
+            margin-bottom: 15px; /* 從 40px 調降，讓標題與第一項目的總間距等於 30px */
             color: #444; 
-            border-bottom: 3px solid #FFD1DC; /* 粉色底線 */
+            border-bottom: 3px solid #FFD1DC; 
             display: inline-block; 
             padding-bottom: 5px; 
         }
 
-        /* 聯絡資訊列：確保圖標與文字垂直置中，且水平居中 */
-        .contact-row {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 15px; /* 圖標與文字的間距 */
-            margin: 25px 0; /* 每行之間的固定等距 */
-            font-size: 18px;
-            color: #666;
+        /* 🚀 調整重點：統一每行間距 */
+        .contact-row { 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            gap: 15px; 
+            margin: 15px 0; /* 15px 上邊距 + 15px 下邊距 = 30px 總項目間距 */
+            font-size: 18px; 
+            color: #666; 
         }
 
-        .contact-row a {
-            color: #666;
-            text-decoration: none;
-            transition: 0.3s;
-        }
-
-        .contact-row a:hover {
-            color: #000;
-            border-bottom: 1px solid #B0E0E6;
-        }
-
-        /* 圖標尺寸統一 */
-        .icon {
-            width: 24px;
-            height: 24px;
-            opacity: 0.7;
-        }
-
-        .linkedin-text {
-            color: #0077b5 !important;
-            font-weight: 500;
-        }
+        .contact-row a { color: #666; text-decoration: none; border-bottom: 1px solid transparent; transition: 0.3s; }
+        .contact-row a:hover { border-bottom: 1px solid #B0E0E6; color: #000; }
+        
+        .icon { width: 24px; height: 24px; opacity: 0.9; }
+        .linkedin-text { color: #0077b5 !important; font-weight: 500; }
     </style>
 </head>
 <body>
