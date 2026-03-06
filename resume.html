@@ -18,7 +18,8 @@
             color: var(--text-dark);
             font-family: 'PingFang TC', 'Microsoft JhengHei', sans-serif;
             margin: 0;
-            padding: 60px 10%;
+            /* 將左右間距縮小，讓內容變寬 */
+            padding: 60px 5%; 
             line-height: 1.6;
         }
 
@@ -28,23 +29,26 @@
         }
 
         .resume-container {
-            max-width: 900px;
+            /* 增加最大寬度，讓頁面在電腦上看更寬敞 */
+            max-width: 1200px; 
             margin: 0 auto;
             animation: slideUpFade 1s ease-out forwards;
         }
 
-        h1 { font-size: 36px; border-bottom: 3px solid var(--accent-pink); display: inline-block; padding-bottom: 5px; }
+        h1 { font-size: 36px; border-bottom: 3px solid var(--accent-pink); display: inline-block; padding-bottom: 5px; margin-bottom: 30px; }
 
-        .section { display: flex; margin-top: 50px; gap: 40px; }
-        .section-title { width: 25%; font-size: 22px; font-weight: bold; color: #555; }
-        .section-content { width: 75%; }
+        .section { display: flex; margin-top: 50px; gap: 50px; }
+        /* 調整比例：左側標題佔 20%，右側內容佔 80% */
+        .section-title { width: 20%; font-size: 22px; font-weight: bold; color: #555; flex-shrink: 0; }
+        .section-content { width: 80%; }
 
-        .item { margin-bottom: 40px; }
-        .item-header { display: flex; gap: 20px; }
-        .date { width: 140px; font-size: 14px; color: #888; flex-shrink: 0; padding-top: 4px; }
-        .details h3 { margin: 0; font-size: 18px; color: #333; }
+        .item { margin-bottom: 45px; }
+        .item-header { display: flex; gap: 30px; }
+        .date { width: 160px; font-size: 14px; color: #888; flex-shrink: 0; padding-top: 4px; }
+        .details { flex-grow: 1; }
+        .details h3 { margin: 0; font-size: 19px; color: #333; }
         .details h4 { margin: 5px 0 2px; color: #666; font-weight: 600; }
-        .location { color: #999; font-size: 13px; display: block; margin-bottom: 10px; }
+        .location { color: #999; font-size: 13px; display: block; margin-bottom: 12px; }
         
         ul { padding-left: 18px; list-style: none; margin-top: 10px; }
         ul li { margin-bottom: 8px; }
@@ -53,7 +57,16 @@
         .sub-list { padding-left: 20px; margin-top: 5px; }
         .sub-list li::before { content: "-"; color: var(--accent-lavender); }
         
-        hr { border: 0; height: 1px; background: linear-gradient(to right, var(--accent-pink), var(--accent-lavender), var(--accent-blue)); margin: 40px 0; }
+        hr { border: 0; height: 1px; background: linear-gradient(to right, var(--accent-pink), var(--accent-lavender), var(--accent-blue)); margin: 50px 0; }
+
+        /* 手機版適應：寬螢幕時分欄，手機時改為垂直排列 */
+        @media (max-width: 768px) {
+            .section { flex-direction: column; gap: 20px; }
+            .section-title { width: 100%; border-bottom: 1px solid var(--accent-lavender); padding-bottom: 5px; }
+            .section-content { width: 100%; }
+            .item-header { flex-direction: column; gap: 10px; }
+            .date { width: 100%; }
+        }
     </style>
 </head>
 <body>
