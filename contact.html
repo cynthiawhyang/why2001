@@ -5,46 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | Cynthia Yang</title>
     <style>
-        body {
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            font-family: 'PingFang TC', sans-serif;
-            background-color: #fcfafc; /* 莫內淡紫色背景 */
-        }
-        @keyframes slideUpFade {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .contact-card {
-            text-align: center;
-            background: white;
-            padding: 60px;
-            border-radius: 20px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.03);
-            animation: slideUpFade 1s ease-out;
-            max-width: 400px;
-            width: 90%;
-        }
+        body { margin: 0; display: flex; justify-content: center; align-items: center; height: 100vh; font-family: 'PingFang TC', sans-serif; background-color: #fcfafc; }
+        @keyframes slideUpFade { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        .contact-card { text-align: center; background: white; padding: 60px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.03); animation: slideUpFade 1s ease-out; max-width: 450px; width: 90%; }
         h1 { font-size: 32px; margin-bottom: 30px; color: #444; border-bottom: 3px solid #FFD1DC; display: inline-block; padding-bottom: 5px; }
         .info-item { margin: 20px 0; font-size: 18px; color: #666; }
         .info-item a { color: #555; text-decoration: none; border-bottom: 1px solid #E6E6FA; transition: 0.3s; }
         .info-item a:hover { border-bottom: 2px solid #B0E0E6; color: #000; }
         
-        .linkedin-btn {
-            display: inline-block;
-            margin-top: 30px;
-            padding: 10px 20px;
-            background-color: #B0E0E6; /* 粉藍色 */
-            color: #444;
+        /* LinkedIn 圖標與文字整合樣式 */
+        .linkedin-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 25px;
             text-decoration: none;
-            border-radius: 25px;
+            color: #0077b5;
             font-weight: 500;
             transition: 0.3s;
         }
-        .linkedin-btn:hover { background-color: #FFD1DC; transform: translateY(-3px); }
+        .linkedin-link:hover { opacity: 0.7; }
+        .linkedin-icon { width: 24px; height: 24px; }
     </style>
 </head>
 <body>
@@ -54,8 +36,9 @@
         <div class="info-item"><strong>Phone:</strong> 0921003560</div>
         <div class="info-item"><strong>Email:</strong> <a href="mailto:cynthiawhyang@gmail.com">cynthiawhyang@gmail.com</a></div>
         
-        <a href="https://www.linkedin.com/in/cynthia-yang-why20011108/" target="_blank" class="linkedin-btn">
-            View My LinkedIn Profile
+        <a href="https://www.linkedin.com/in/cynthia-yang-why20011108/" target="_blank" class="linkedin-link">
+            <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="linkedin-icon">
+            <span>View My LinkedIn Profile</span>
         </a>
     </div>
 
