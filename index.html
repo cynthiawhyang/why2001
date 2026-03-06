@@ -5,106 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cynthia Yang | Home</title>
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'PingFang TC', 'Microsoft JhengHei', sans-serif;
-            background-color: #fcfafc;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            overflow: hidden;
-        }
-
-        @keyframes slideUpFade {
-            0% { opacity: 0; transform: translateY(50px); }
-            100% { opacity: 1; transform: translateY(0); }
-        }
-
-        .container {
-            display: flex;
-            align-items: center;
-            gap: 60px;
-            max-width: 1000px;
-            animation: slideUpFade 1.2s ease-out forwards;
-        }
-
-        .profile-pic {
-            width: 380px;
-            height: 380px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 8px solid white;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-        }
-
+        body { margin: 0; padding: 0; font-family: 'PingFang TC', 'Microsoft JhengHei', sans-serif; background-color: #fcfafc; display: flex; justify-content: center; align-items: center; height: 100vh; overflow: hidden; }
+        @keyframes slideUpFade { 0% { opacity: 0; transform: translateY(50px); } 100% { opacity: 1; transform: translateY(0); } }
+        .container { display: flex; align-items: center; gap: 60px; max-width: 1000px; animation: slideUpFade 1.2s ease-out forwards; }
+        .profile-pic { width: 380px; height: 380px; border-radius: 50%; object-fit: cover; border: 8px solid white; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
         .intro-section { max-width: 480px; }
-
         h1 { font-size: 70px; margin: 0; color: #333; font-weight: 700; }
+        /* 🚀 更新名字：Wen-Hsin (Cynthia) Yang. */
         h2 { font-size: 22px; margin: 10px 0 20px; color: #555; letter-spacing: 0.5px; }
-        
-        /* === 🚀 本次優化重點 🚀 === */
-        p { 
-            line-height: 1.6; 
-            color: #666; 
-            margin-bottom: 40px; 
-            font-size: 16px;
-            /* 改為靠左對齊，解決單字間距過大的問題 */
-            text-align: left; 
-            /* 微調字距讓英文閱讀更舒適 */
-            letter-spacing: 0.2px;
-            word-spacing: 1px;
-        }
-        /* ========================= */
-
+        p { line-height: 1.6; color: #666; margin-bottom: 40px; font-size: 16px; text-align: left; letter-spacing: 0.2px; word-spacing: 1px; }
         .button-group { display: flex; gap: 25px; }
-
-        .btn-circle {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-decoration: none;
-            color: #444;
-            font-weight: 500;
-            font-size: 14px;
-            letter-spacing: 1px;
-            transition: all 0.4s ease;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-        }
-
+        .btn-circle { width: 100px; height: 100px; border-radius: 50%; display: flex; justify-content: center; align-items: center; text-decoration: none; color: #444; font-weight: 500; font-size: 14px; letter-spacing: 1px; transition: all 0.4s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
         .btn-circle:hover { transform: translateY(-8px); box-shadow: 0 12px 25px rgba(0,0,0,0.1); }
-
         .pink { background-color: #FFD1DC; }
         .lavender { background-color: #E6E6FA; }
         .blue { background-color: #B0E0E6; }
-
-        @media (max-width: 768px) {
-            .container { flex-direction: column; text-align: center; height: auto; padding: 40px 0; }
-            .profile-pic { width: 250px; height: 250px; }
-            h1 { font-size: 50px; }
-            .button-group { justify-content: center; }
-            p { text-align: center; } /* 手機版則建議置中比較好看 */
-        }
+        @media (max-width: 768px) { .container { flex-direction: column; text-align: center; height: auto; padding: 40px 0; } .profile-pic { width: 250px; height: 250px; } h1 { font-size: 50px; .button-group { justify-content: center; } p { text-align: center; } }
     </style>
 </head>
 <body>
-
     <div class="container">
         <img src="profile.jpg" alt="Cynthia Yang" class="profile-pic">
-
         <div class="intro-section">
             <h1>Hi!</h1>
-            <h2>It's Cynthia Yang</h2>
+            <h2>It's Wen-Hsin (Cynthia) Yang.</h2>
             <p>
                 I am an Honours graduate from the University of Amsterdam, PPLE College, majoring in Law. 
                 Currently, I serve as a Legal Operations Associate at SHOPLINE, where I specialise in overseeing the end-to-end contract lifecycle. 
                 Feel free to explore my journey or connect with me via the links below.
             </p>
-            
             <div class="button-group">
                 <a href="resume.html" class="btn-circle pink">Resume</a>
                 <a href="projects.html" class="btn-circle lavender">Projects</a>
@@ -112,6 +41,5 @@
             </div>
         </div>
     </div>
-
 </body>
 </html>
