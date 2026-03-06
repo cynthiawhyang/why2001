@@ -5,12 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cynthia Yang | Home</title>
     <style>
-        /* 基本樣式 */
         body {
             margin: 0;
             padding: 0;
             font-family: 'PingFang TC', 'Microsoft JhengHei', sans-serif;
-            background-color: #f5f5f5;
+            background-color: #fcfafc; /* 極淡的暖紫色調背景 */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -18,8 +17,8 @@
             overflow: hidden;
         }
 
-        /* 飄移動畫 */
-        @keyframes slideUp {
+        /* 飄移動畫：由下往上、透明度漸顯 */
+        @keyframes slideUpFade {
             0% { opacity: 0; transform: translateY(50px); }
             100% { opacity: 1; transform: translateY(0); }
         }
@@ -29,52 +28,59 @@
             align-items: center;
             gap: 60px;
             max-width: 1000px;
-            animation: slideUp 1.2s ease-out forwards;
+            animation: slideUpFade 1.2s ease-out forwards;
         }
 
-        /* 左側大頭照 */
         .profile-pic {
-            width: 400px;
-            height: 400px;
+            width: 380px;
+            height: 380px;
             border-radius: 50%;
             object-fit: cover;
-            filter: grayscale(100%); /* 圖一的黑白風格 */
+            filter: grayscale(100%); /* 保持圖一的黑白專業感 */
+            border: 8px solid white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
         }
 
-        /* 右側文字內容 */
-        .intro-section {
-            max-width: 450px;
-        }
+        .intro-section { max-width: 450px; }
 
-        h1 { font-size: 80px; margin: 0; font-weight: bold; }
-        h2 { font-size: 24px; margin: 10px 0; }
-        p { line-height: 1.6; color: #333; margin-bottom: 40px; }
+        h1 { font-size: 75px; margin: 0; color: #333; font-weight: 700; }
+        h2 { font-size: 24px; margin: 15px 0; color: #555; letter-spacing: 1px; }
+        
+        /* 針對個人背景的描述 */
+        p { line-height: 1.8; color: #666; margin-bottom: 40px; font-size: 15px; }
 
-        /* 按鈕組 */
-        .button-group {
-            display: flex;
-            gap: 20px;
-        }
+        .button-group { display: flex; gap: 25px; }
 
         .btn-circle {
-            width: 110px;
-            height: 110px;
+            width: 100px;
+            height: 100px;
             border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
             text-decoration: none;
-            color: #000;
-            font-weight: bold;
-            font-size: 16px;
-            border: 1px solid rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
+            color: #444;
+            font-weight: 500;
+            font-size: 14px;
+            letter-spacing: 1px;
+            transition: all 0.4s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
         }
 
-        .btn-circle:hover { transform: scale(1.1); }
-        .yellow { background-color: #f1b211; }
-        .red { background-color: #ff5031; }
-        .cyan { background-color: #85d8d0; }
+        .btn-circle:hover { transform: translateY(-8px); box-shadow: 0 12px 25px rgba(0,0,0,0.1); }
+
+        /* 莫內配色：粉、紫、藍 */
+        .pink { background-color: #FFD1DC; }      /* 柔嫩淡粉 */
+        .lavender { background-color: #E6E6FA; }  /* 薰衣草紫 */
+        .blue { background-color: #B0E0E6; }      /* 粉末藍 */
+
+        /* 手機版適應 */
+        @media (max-width: 768px) {
+            .container { flex-direction: column; text-align: center; height: auto; padding: 40px 0; }
+            .profile-pic { width: 250px; height: 250px; }
+            h1 { font-size: 50px; }
+            .button-group { justify-content: center; }
+        }
     </style>
 </head>
 <body>
@@ -85,12 +91,12 @@
         <div class="intro-section">
             <h1>Hello</h1>
             <h2>A Bit About Me</h2>
-            <p>我是 Cynthia，目前在 SHOPLINE 擔任法務營運助理。我專注於法律爭議解決、流程優化以及合規管理，致力於在法律專業與企業運作間建立高效的橋樑。</p>
+            <p>我是 Cynthia，目前在 SHOPLINE 擔任法務營運助理。我致力於在法律專業與企業運作間建立高效的橋樑。歡迎透過下方按鈕了解我的簡歷與聯繫方式。</p>
             
             <div class="button-group">
-                <a href="resume.html" class="btn-circle yellow">Resume</a>
-                <a href="projects.html" class="btn-circle red">Projects</a>
-                <a href="contact.html" class="btn-circle cyan">Contact</a>
+                <a href="resume.html" class="btn-circle pink">Resume</a>
+                <a href="projects.html" class="btn-circle lavender">Projects</a>
+                <a href="contact.html" class="btn-circle blue">Contact</a>
             </div>
         </div>
     </div>
